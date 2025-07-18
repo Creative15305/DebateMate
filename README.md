@@ -1,114 +1,165 @@
-## 🗣️ DebateMate – AI-Powered Debate Analysis & Trainer
 
-DebateMate is an open-source platform offering personalized, one-to-one AI training sessions with secure authentication. Users receive customized learning roadmaps powered by Gemini AI. After uploading or live-recording debate audio, the system transcribes, analyzes performance, and provides corrective feedback to enhance debating and public speaking skills.
+# 🧠 DebateMate – AI-Powered Debate Coach & Analyzer
+
+![License](https://img.shields.io/github/license/Ankit27-09/DebateMate?style=flat-square)
+![Next.js](https://img.shields.io/badge/Next.js-15-blue?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-✔️-3178c6?style=flat-square)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-✔️-38B2AC?style=flat-square)
+
+DebateMate is an open-source platform offering personalized, AI-powered debate training and analysis. Users can engage in one-on-one practice debates, receive real-time AI feedback, and follow a tailored learning roadmap to improve their speaking and critical thinking skills.
 
 ---
 
 ## ✨ Features
 
-- 🔐 **Secure Authentication:** NextAuth & Next.js
-- 🎯 **Personalized AI Training:** One-to-one debate sessions with real-time feedback
-- 🛣 **Customized Learning Paths:** Clear timelines powered by Gemini AI
-- 💻 **Modern UI:** Landing page built with Next.js and Shadcn UI
+- 🔐 **Secure Authentication** via Clerk and Next.js Middleware
+- 🧑‍🏫 **AI Debate Feedback** powered by Gemini AI
+- 🎯 **Learning Path Recommendations** customized for each user
+- 📊 **Visual Analytics** for performance tracking
+- 📹 **Debate Recording & Transcript Analysis**
+- 💬 **ChatBot Interface** for practice & guidance
+- 🌗 **Dark/Light Mode Toggle**
+- 🧩 Modular & Extensible Codebase (Shadcn, Tailwind, Next.js)
 
 ---
 
-## 📦 Folder Structure
+## 📂 Project Structure
 
-```plaintext
+```bash
 DebateMate/
-├── .next/                   # Next.js build output
-├── node_modules/            # Project dependencies
-├── public/                  # Static assets (images, fonts, etc.)
-├── src/                     # Main source directory
-│   ├── app/                 # Next.js app directory (pages and layouts)
-│   ├── components/          # UI components
-│   ├── hooks/               # Custom React hooks
-│   ├── lib/                 # Utilities and libraries
-│   └── middleware.ts        # Middleware (e.g., auth, logging)
-├── .env                     # Environment variables
-├── .gitignore               # Git ignore rules
-├── CODE_OF_CONDUCT.md       # Community guidelines
-├── CONTRIBUTING.md          # Contribution rules
-├── LICENSE                  # MIT License
-├── README.md                # Project overview
-├── components.json          # Shadcn component config
-├── eslint.config.mjs        # ESLint config
-├── next.config.ts           # Next.js config
-├── next-env.d.ts            # Next.js type definitions
-├── package.json             # NPM package metadata
-├── package-lock.json        # Dependency lock file
-├── postcss.config.mjs       # PostCSS config
-└── tsconfig.json            # TypeScript config
+├── .env.example           # API keys & environment config
+├── public/                # Static files
+├── src/
+│   ├── app/               # Next.js app routes
+│   ├── components/        # UI + reusable components
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   ├── store/             # Zustand state store
+│   └── middleware.ts      # Clerk authentication middleware
+├── .github/               # Issue & PR templates
+├── README.md              # You're here!
+├── LICENSE                # MIT License
+├── package.json           # Project dependencies & scripts
+├── tailwind.config.js     # Tailwind theme config
+├── next.config.ts         # Next.js settings
+├── tsconfig.json          # TypeScript compiler options
+└── postcss.config.mjs     # PostCSS config
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-**🧰 Prerequisites**
-- Node.js v18+
-- Next.js 15
-- npm, pip, and Git
+### 📦 Prerequisites
+
+- Node.js **v18+**
+- npm or yarn
+- Clerk account (for authentication)
+- Gemini/OpenAI API Key
+
+### 🛠️ Installation
+
+1. **Clone the repo**
+```bash
+git clone https://github.com/Ankit27-09/DebateMate.git
+cd DebateMate
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Set up environment variables**
+```bash
+cp .env.example .env
+```
+Then fill in your Clerk and Gemini API keys.
+
+4. **Start the dev server**
+```bash
+npm run dev
+```
+
+Open [`http://localhost:3000`](http://localhost:3000) in your browser.
 
 ---
 
-## 🛠️ Installation
+## 🧑‍💻 Contributing
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Ankit27-09/DebateMate.git
-   cd DebateMate
-   ```
+We love contributions from the community!
 
-2. **FrontEnd (Next.js + TypeScript)**
-   ```bash
-   npm install
+- 📜 Please read [CONTRIBUTING.md](./CONTRIBUTING.md)
+- 🧾 Follow our [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
+- Check out `good first issue` or `help wanted` labels on issues
 
-   cp .env.example .env #enter you api keys and gemini key
+### ✅ Pull Request Checklist
 
-   npm run dev
-   ```
-   Then open [http://localhost:3000](http://localhost:3000) in your browser.
+- [ ] Lint and test your code
+- [ ] Include clear and descriptive commit messages
+- [ ] Add tests or update existing ones (if applicable)
+- [ ] Add relevant docs or update README if necessary
 
 ---
 
-## 🤝 Contributing
+## 📊 Tech Stack
 
-We welcome contributions! See our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
-
-You can also explore:
-- `good first issue`
-- `help wanted`
-- Join the discussion tab
-
----
-
-## 📢 Community & Support
-
-- 🗨️ [GitHub Discussions](https://github.com/Ankit27-09/DebateMate/discussions)
-- 🐞 [Raise an Issue](https://github.com/Ankit27-09/DebateMate/issues)
+| Layer          | Technology                      |
+|----------------|----------------------------------|
+| Frontend       | Next.js 15, TypeScript           |
+| Styling        | Tailwind CSS, PostCSS, Shadcn UI |
+| Auth           | Clerk + Next.js Middleware       |
+| AI Integration | Gemini AI, OpenAI                |
+| Charts         | Chart.js, Recharts               |
+| Animations     | Framer Motion                    |
+| State Mgmt     | Zustand                          |
 
 ---
 
-## 🌍 Impact
+## 📌 Notable Directories
 
-DebateMate lowers the barrier to effective debating practice by providing instant, AI-driven feedback and personalized learning paths—ideal for students, educators, and public speakers.
+- `src/app/`: Public and Private routing
+- `src/components/`: Modular UI components
+- `src/hooks/`: Utility hooks like `useToast`, `useMobile`
+- `src/store/`: Zustand-based global state
+- `src/app/api/`: API endpoints for debate analysis, suggestions, etc.
 
 ---
 
-## 🔮 Future Scope
+## 🌍 Vision & Roadmap
 
-- 🎭 **Emotion-Aware AI Debater:** Adapts tone and rebuttal style in real-time
-- 👨‍🏫 **Virtual Mentor Mode:** Debate against AI-powered personas (e.g., Tavus)
-- 📈 **Debate Progress Analytics:** Track clarity, logic, and tone over time with visual insights
-- 🏅 **Gamified Debate Ladder:** Ranks, achievements, and global leaderboards
-- 🧩 **Educator Plugin System:** Custom debate topics, rubrics, and assignments
-- 🌐 **Multilingual & Cultural Debate Modes:** Regional language support with culturally adaptive prompts
+> *"To democratize debate training and improve public speaking skills through accessible AI feedback."*
+
+### Coming Soon 🚧
+
+- 🎭 Emotion-Aware AI Rebuttals
+- 🏆 Leaderboards & Achievements
+- 🌐 Multilingual Debate Support
+- 👨‍🏫 Educator Dashboard
+- 📈 Weekly Progress Reports
+
+---
+
+## 🧪 Testing
+
+> (To be added)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](./LICENSE).  
-Feel free to use, fork, and contribute!
+This project is licensed under the **MIT License**.  
+See [LICENSE](./LICENSE) for more details.
+
+---
+
+## 🙋 Support
+
+- [Open an Issue](https://github.com/Ankit27-09/DebateMate/issues)
+- [Start a Discussion](https://github.com/Ankit27-09/DebateMate/discussions)
+
+---
+
+## 🌟 Star us on GitHub if you like the project!
+
+> Made with 💡 by [Ankit Singh](https://github.com/Ankit27-09)
